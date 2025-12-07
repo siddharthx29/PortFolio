@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hi, I'm <span class="highlight">Siddharth MV</span></h1>
+        <p class="subtitle">Full Stack Developer | UI/UX Designer | Constant Learner</p>
+        <p class="description">
+            I build accessible, pixel-perfect, secure, and performant web applications.
+            Let's turn your ideas into reality.
+        </p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('projects') }}" class="btn primary">View Work</a>
+            <a href="{{ url_for('contact') }}" class="btn secondary">Contact Me</a>
+        </div>
+    </div>
+
+    <!-- Placeholder for an image or 3D element -->
+    <div class="hero-visual">
+        <div class="glow-circle"></div>
+    </div>
+</section>
+
+{% endblock %}

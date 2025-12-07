@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="section-title">Certifications</h1>
+
+<div class="skills-grid">
+    {% for c in certifications %}
+    <div class="project-card">
+        <h3>{{ c.title }}</h3>
+        <p>{{ c.issuer }}</p>
+        <p class="description">{{ c.date }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% if not certifications %}
+<p>No certifications listed yet.</p>
+{% endif %}
+
+{% endblock %}
