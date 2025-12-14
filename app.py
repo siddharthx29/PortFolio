@@ -69,9 +69,9 @@ def certifications():
     ]
     return render_template("certifications.html", certifications=certifications_data)
 
-@app.route("/contact")
+@app.route("/contact me")
 def contact():
-    return render_template("contact.html")
+    return render_template("contact&about me.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -313,7 +313,7 @@ textarea {
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid var(--card-border);
     border-radius: 12px;
-    color: white;
+    color: rgb(182, 127, 127);
     font-family: var(--font-body);
     font-size: 16px;
     transition: 0.3s;
@@ -342,4 +342,70 @@ form button {
 form button:hover {
     box-shadow: 0 4px 20px var(--accent-glow);
     transform: translateY(-2px);
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+    color: #7da8e4;
+}
+
+.tagline {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.about-card {
+    background: #7eb0e1;
+    padding: 25px;
+    border-left: 5px solid #2563eb;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.intro span {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.section ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    background: #5f76bf;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #1e3a8a;
+}
+
+.goal {
+    background: blue;
+    padding: 20px;
+    border-radius: 10px;
 }
