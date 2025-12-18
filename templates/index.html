@@ -1,24 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
 
-<section class="hero">
+<section class="hero hero-video">
+
+    <!-- VIDEO -->
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="{{ url_for('static', filename='videos/hero.mp4') }}" type="video/mp4">
+    </video>
+
+    <!-- OVERLAY -->
+    <div class="video-overlay"></div>
+
+    <!-- CONTENT -->
     <div class="hero-content">
         <h1>Hi, I'm <span class="highlight">Siddharth MV</span></h1>
-        <p class="subtitle">Full Stack Developer | UI/UX Designer | Devops Enthusiast |Constant Learner</p>
+
+        <p class="subtitle">
+            Full Stack Developer | UI/UX Designer | DevOps Enthusiast | Constant Learner
+        </p>
+
         <p class="description">
             I build accessible, pixel-perfect, secure, and performant web applications.
             Let's turn your ideas into reality.
         </p>
+
         <div class="hero-buttons">
             <a href="{{ url_for('projects') }}" class="btn primary">View Work</a>
             <a href="{{ url_for('contact') }}" class="btn secondary">About Me</a>
         </div>
     </div>
 
-    <!-- Placeholder for an image or 3D element -->
-    <div class="hero-visual">
-        <div class="glow-circle"></div>
-    </div>
 </section>
 
 {% endblock %}

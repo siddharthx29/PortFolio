@@ -2,6 +2,11 @@
 
 {% block content %}
 
+<!-- VIDEO BACKGROUND -->
+<video class="bg-video" autoplay muted loop playsinline>
+    <source src="{{ url_for('static', filename='videos/hero.mp4') }}" type="video/mp4">
+</video>
+
 <section class="about-container">
 
     <h1 class="title">About Me</h1>
