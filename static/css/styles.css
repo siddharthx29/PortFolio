@@ -441,31 +441,44 @@ footer {
    ========================= */
 @media (max-width: 768px) {
     body {
-        padding-top: 0;
+        padding-top: 72px; /* reserve space for fixed nav */
     }
 
     nav {
         position: fixed;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 16px 5%;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        padding: 12px 5%;
+        z-index: 1000;
     }
 
     .nav-links {
-        gap: 20px;
+        gap: 14px;
         flex-wrap: wrap;
         justify-content: center;
         margin-left: 0;
         width: 100%;
     }
 
+    .nav-links a {
+        padding: 10px 12px;
+        display: inline-block;
+        font-size: 16px;
+        color: var(--text-secondary);
+    }
+
     .hero {
-        min-height: 100vh;
-        padding: 100px 20px 40px;
+        min-height: calc(100vh - 72px);
+        padding: 48px 20px 40px;
+        align-items: flex-start;
     }
 
     .bg-video {
-        display: none;
+        display: none; /* hide video on small screens for performance */
     }
 
     .video-overlay {
@@ -473,48 +486,64 @@ footer {
     }
 
     .hero h1 {
-        font-size: 42px;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center; /* center text on mobile */
+        padding: 12px;
     }
 
     .hero-buttons {
         gap: 12px;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 320px;
+        padding: 14px 20px;
+        font-size: 16px;
     }
 
     .btn {
         padding: 12px 24px;
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .card-style,
     .project-card,
     .skill-card {
-        padding: 16px;
+        padding: 14px;
     }
 
     .about-container {
-        margin: 40px auto;
-        padding: 20px;
-        gap: 24px;
+        margin: 32px auto;
+        padding: 16px;
+        gap: 20px;
     }
 
     .about-container .title {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .about-container .tagline {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .about-card {
-        padding: 20px;
+        padding: 16px;
     }
 
     .section {
-        gap: 12px;
+        gap: 10px;
     }
 
     .section h2 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .section ul li {
@@ -532,22 +561,23 @@ footer {
     }
 
     .contact-container {
-        margin: 40px auto;
-        padding: 30px 20px;
-        gap: 30px;
+        margin: 32px auto;
+        padding: 20px;
+        gap: 20px;
     }
 
     .contact-container .section-title {
-        font-size: 36px;
+        font-size: 28px;
     }
 
     .contact-container input,
     .contact-container textarea {
         padding: 12px 14px;
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .contact-container textarea {
         min-height: 120px;
     }
+}
 }
